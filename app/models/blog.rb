@@ -39,7 +39,7 @@ class Blog < ActiveRecord::Base
 
   # Mostly Behaviour
   setting :text_filter,                :string, 'markdown smartypants'
-  setting :comment_text_filter,        :string, 'markdown smartypants'
+  setting :comment_text_filter,        :string, ''
   setting :limit_article_display,      :integer, 10
   setting :limit_rss_display,          :integer, 10
   setting :default_allow_pings,        :boolean, false
@@ -56,8 +56,8 @@ class Blog < ActiveRecord::Base
   setting :email_from,                 :string, 'typo@example.com'
   setting :editor,                     :integer, 'visual'
   setting :allow_signup,               :integer, 0
-  setting :date_format,                :string, '%d/%m/%Y'
-  setting :time_format,                :string, '%Hh%M'
+  setting :date_format,                :string, '%Y-%m-%d'
+  setting :time_format,                :string, '%H:%M'
   setting :image_thumb_size,           :integer, 125
   setting :image_medium_size,          :integer, 600
 

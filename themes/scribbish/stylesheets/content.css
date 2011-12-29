@@ -74,6 +74,16 @@
 	border-bottom: 1px dotted #aaa;
 }
 
+#content #date {
+	line-height: 12px;
+	margin: 0.5em 0 0.5em;
+}
+
+#content #name {
+       font-size: 130%;
+       color: #FF0080;
+       }
+
 #content p {
 	line-height: 15px;
 	margin: 0 0 1.2em;
@@ -308,7 +318,8 @@ color: #444;
 }
 
 #sidebar h3 {
-	font: bold 14px "lucidamac bold", "lucida grande", verdana, arial, helvetica, sans-serif;
+        font-family:"SimSun";
+        color: #444;
 	margin: 0 0 0.5em;
 }
 

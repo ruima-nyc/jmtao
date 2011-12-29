@@ -7,11 +7,12 @@
 	</div>
 	<div class="info">
 		<h4><%=  article.title %></h4>
-<p><%= author_link(article)%>: 蕾絲，蕾絲，蕾絲的風潮仍未退去。這條連衣裙屬修身款形，衣身雙層面料，衣袖單層蕾絲，顏色又是萬無一失的黑，白，藏青，性感不失典雅。寒冬，外搭羊絨開衫或長毛衣開衫，出門加長大衣，應該不會冷；春秋，搭西裝小外套就好。</p>
+                <p id="date"><%= display_date article.published_at %></p>
+<p><span id="name"><%= author_link(article)%>:</span> 蕾絲，蕾絲，蕾絲的風潮仍未退去。這條連衣裙屬修身款形，衣身雙層面料，衣袖單層蕾絲，顏色又是萬無一失的黑，白，藏青，性感不失典雅。寒冬，外搭羊絨開衫或長毛衣開衫，出門加長大衣，應該不會冷；春秋，搭西裝小外套就好。</p>
 <ul>
 <% if article.taobao_item %>
 <li><strong>￥<%= print_price(article.taobao_item.price) %></strong></li>
-<li><%= link_to  '该商品淘宝页',article.taobao_item.url,:id => "taobao"%></li>
+<li><%= link_to  '商品链接',article.taobao_item.url,:id => "taobao"%></li>
 <% end %>
 <li><%= link_to_permalink(article,'评论 (0)') if article.allow_comments? %></li>
 <ul>
